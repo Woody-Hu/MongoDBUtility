@@ -51,7 +51,7 @@ namespace MongoDBUtility
         public static bool GetIfAsThisType(Type inputType)
         {
             var tempType = inputType;
-            AutoMongoDBContextAttribue tempAttribute = tempType.GetCustomAttribute(tempType, false) as AutoMongoDBContextAttribue;
+            AutoMongoDBContextAttribue tempAttribute = tempType.GetCustomAttribute(typeof(AutoMongoDBContextAttribue), false) as AutoMongoDBContextAttribue;
             if (null == tempAttribute)
             {
                 return false;
