@@ -61,7 +61,7 @@ namespace MongoDBAutofacMiddlewareImp
             DeleteMethod(input).Wait();
         }
 
-        public T Get(string id)
+        public T GetById(string id)
         {
             return GetMethod(k => k.Id == id).Result.First();
         }
